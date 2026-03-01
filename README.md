@@ -16,8 +16,6 @@
 
 ## Screenshots
 
-> Drop your screenshots in `Themes/screenshots/` and they will appear here.
-
 | Evergreen Forest | Artic Night |
 |:---:|:---:|s
 | ![Evergreen](Themes/screenshots/evergreen.png) | ![Artic Night](Themes/screenshots/artic-night.png) |
