@@ -1,0 +1,56 @@
+# =====================================================
+# DOTFILES — .gitignore
+# =====================================================
+
+# ── Themes: generated output (rebuilt on install) ─────
+Themes/generated/
+
+# ── Themes: wallpaper symlink (recreated by generate.sh)
+Themes/wallpapers/active
+
+# ── Themes: alternative evergreen wallpapers ──────────
+Themes/wallpapers/evergreen_roses.jpg
+Themes/wallpapers/evergreen_waterfall.jpg
+Themes/wallpapers/evergreen_waterfall2.jpg
+
+# ── Generated config files (symlinked from Themes) ────
+.config/waybar/colors.css
+.config/rofi/active.rasi
+.config/swaync/style.css
+.config/foot/foot.ini
+.config/fastfetch/config.jsonc
+.config/swaylock/config
+.config/starship.toml
+
+# ── Rofi: nothing else needed beyond config.rasi ──────
+.config/rofi/themes/
+
+# ── Private / sensitive ───────────────────────────────
+.config/mimeapps.list
+.config/pulse/
+.config/dconf/
+.config/glib-2.0/
+.gnupg/
+.pki/
+
+# ── App-specific caches and data ──────────────────────
+.cache/
+.config/Code/
+.config/rstudio/
+.config/teams-for-linux/
+.config/zen/
+.zen/
+.config/onlyoffice/
+
+# ── Shell history ─────────────────────────────────────
+.bash_history
+.zsh_history
+.zcompdump
+.Rhistory
+
+# ── Misc ──────────────────────────────────────────────
+*.log
+*.swp
+*.tmp
+home_files.txt
+config_files.txt

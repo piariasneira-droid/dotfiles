@@ -1,0 +1,46 @@
+# =====================================================
+# Catppuccin Mocha — Swaylock Config
+# AUTO-GENERATED — do not edit manually.
+# Edit catppuccin-mocha.conf and re-run generate.sh
+# =====================================================
+
+# ── Appearance ────────────────────────────────────────
+ignore-empty-password
+show-failed-attempts
+daemonize
+
+# ── Colors (no # prefix in swaylock config) ───────────
+
+# Background
+color=1e1e2e
+
+# Ring
+ring-color=89b4fa
+ring-ver-color=b4befe
+ring-wrong-color=f38ba8
+ring-clear-color=89dceb
+
+# Inside circle
+inside-color=1e1e2e
+inside-ver-color=181825
+inside-wrong-color=313244
+inside-clear-color=181825
+
+# Key press highlight
+key-hl-color=cba6f7
+bs-hl-color=f38ba8
+
+# Separator
+separator-color=00000000
+
+# Text
+text-color=cdd6f4
+text-ver-color=cdd6f4
+text-wrong-color=f38ba8
+text-clear-color=a6adc8
+
+# Line (border between inside and ring)
+line-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+line-clear-color=00000000

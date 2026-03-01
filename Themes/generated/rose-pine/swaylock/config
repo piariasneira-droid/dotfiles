@@ -1,0 +1,46 @@
+# =====================================================
+# Rosé Pine — Swaylock Config
+# AUTO-GENERATED — do not edit manually.
+# Edit rose-pine.conf and re-run generate.sh
+# =====================================================
+
+# ── Appearance ────────────────────────────────────────
+ignore-empty-password
+show-failed-attempts
+daemonize
+
+# ── Colors (no # prefix in swaylock config) ───────────
+
+# Background
+color=191724
+
+# Ring
+ring-color=eb6f92
+ring-ver-color=c4a7e7
+ring-wrong-color=eb6f92
+ring-clear-color=9ccfd8
+
+# Inside circle
+inside-color=191724
+inside-ver-color=1f1d2e
+inside-wrong-color=26233a
+inside-clear-color=1f1d2e
+
+# Key press highlight
+key-hl-color=ebbcba
+bs-hl-color=eb6f92
+
+# Separator
+separator-color=00000000
+
+# Text
+text-color=e0def4
+text-ver-color=e0def4
+text-wrong-color=eb6f92
+text-clear-color=908caa
+
+# Line (border between inside and ring)
+line-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+line-clear-color=00000000

@@ -1,0 +1,115 @@
+# =====================================================
+# Catppuccin Latte — Starship Prompt
+# AUTO-GENERATED — do not edit manually.
+# Edit catppuccin-latte.conf and re-run generate.sh
+# =====================================================
+
+palette = "catppuccin-latte"
+
+format = """
+$username$directory$git_branch$git_status$git_state$python$nodejs$rust$golang$cmd_duration$jobs$status
+$character"""
+
+add_newline = false
+
+[username]
+format     = "[$user ]($style)"
+style_user = "bold fg:#4c4f69"
+style_root = "bold fg:#d20f39"
+show_always = true
+
+[directory]
+format            = "[  $path ]($style)"
+style             = "bold fg:#8839ef"
+truncation_length = 4
+truncate_to_repo  = true
+read_only         = "  "
+read_only_style   = "fg:#d20f39"
+
+[directory.substitutions]
+"~/Documentos" = "󰈙 Docs"
+"~/Imagenes"   = "󰋩 Imgs"
+"~"            = "󱂵 ~"
+
+[git_branch]
+format = "[ $symbol$branch ]($style)"
+symbol = " "
+style  = "bold fg:#04a5e5"
+
+[git_status]
+format    = "([$all_status$ahead_behind ]($style))"
+style     = "bold fg:#fe640b"
+ahead     = "⇡${count}"
+behind    = "⇣${count}"
+diverged  = "⇕⇡${ahead_count}⇣${behind_count}"
+modified  = "!${count}"
+untracked = "?${count}"
+staged    = "+${count}"
+deleted   = "✘${count}"
+stashed   = "≡"
+
+[git_state]
+format = "([$state( $progress_current/$progress_total)]($style)) "
+style  = "fg:#fe640b"
+
+[python]
+format       = "[ ${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\) )]($style)"
+symbol       = " "
+style        = "fg:#04a5e5"
+detect_files = ["requirements.txt", "pyproject.toml", ".python-version", "setup.py"]
+
+[nodejs]
+format       = "[ $symbol($version )]($style)"
+symbol       = " "
+style        = "fg:#8839ef"
+detect_files = ["package.json", ".nvmrc"]
+
+[rust]
+format       = "[ $symbol($version )]($style)"
+symbol       = " "
+style        = "fg:#fe640b"
+detect_files = ["Cargo.toml"]
+
+[golang]
+format       = "[ $symbol($version )]($style)"
+symbol       = " "
+style        = "fg:#04a5e5"
+detect_files = ["go.mod"]
+
+[cmd_duration]
+format            = "[ 󱦟 $duration ]($style)"
+style             = "fg:#6c6f85"
+min_time          = 2000
+show_milliseconds = false
+
+[jobs]
+format    = "[ $symbol$number ]($style)"
+symbol    = " "
+style     = "fg:#df8e1d"
+threshold = 1
+
+[status]
+format   = "[ $symbol$status ]($style)"
+symbol   = " "
+style    = "fg:#d20f39"
+disabled = false
+
+[character]
+success_symbol = "[❯](bold fg:#8839ef)"
+error_symbol   = "[❯](bold fg:#d20f39)"
+vimcmd_symbol  = "[❮](bold fg:#04a5e5)"
+
+[palettes.catppuccin-latte]
+bg0        = "#eff1f5"
+bg1        = "#e6e9ef"
+bg2        = "#dce0e8"
+bg3        = "#bcc0cc"
+fg0        = "#4c4f69"
+fg1        = "#6c6f85"
+accent0    = "#8839ef"
+accent1    = "#1e66f5"
+accent2    = "#7287fd"
+accent-sec = "#04a5e5"
+orange     = "#fe640b"
+red        = "#d20f39"
+yellow     = "#df8e1d"

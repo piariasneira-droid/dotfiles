@@ -1,0 +1,46 @@
+# =====================================================
+# Artic Night — Swaylock Config
+# AUTO-GENERATED — do not edit manually.
+# Edit artic-night.conf and re-run generate.sh
+# =====================================================
+
+# ── Appearance ────────────────────────────────────────
+ignore-empty-password
+show-failed-attempts
+daemonize
+
+# ── Colors (no # prefix in swaylock config) ───────────
+
+# Background
+color=1e2430
+
+# Ring
+ring-color=4a7fa5
+ring-ver-color=5e9fc9
+ring-wrong-color=bf616a
+ring-clear-color=81a1c1
+
+# Inside circle
+inside-color=1e2430
+inside-ver-color=242d3d
+inside-wrong-color=2e3a50
+inside-clear-color=242d3d
+
+# Key press highlight
+key-hl-color=88c0d0
+bs-hl-color=bf616a
+
+# Separator
+separator-color=00000000
+
+# Text
+text-color=d8dee9
+text-ver-color=d8dee9
+text-wrong-color=bf616a
+text-clear-color=8896a8
+
+# Line (border between inside and ring)
+line-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+line-clear-color=00000000

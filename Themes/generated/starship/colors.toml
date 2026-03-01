@@ -1,0 +1,40 @@
+# =====================================================
+# Evergreen Forest — Starship Color Palette
+# AUTO-GENERATED — do not edit manually.
+# Edit evergreen.conf and re-run generate.sh
+#
+# Usage in starship.toml:
+#   $env.STARSHIP_PALETTE_PATH = "~/.config/theme/generated/starship/colors.toml"
+#
+# Or just reference the hex values directly in your
+# starship.toml — this file documents the palette.
+# =====================================================
+
+# bg0     = "#1a2421"   # forest floor
+# bg1     = "#232e2b"   # understory
+# bg2     = "#2d3b36"   # mid surface
+# bg3     = "#3d4f49"   # surface variant
+# fg0     = "#d3c6aa"   # warm sand
+# fg1     = "#9da9a0"   # stone
+# green0  = "#a7c080" # canopy leaf  — directory, character
+# green1  = "#4f772d" # deep foliage
+# green2  = "#90a955" # moss
+# teal    = "#83c092"   # morning dew  — git, languages
+# orange  = "#e69875" # autumn leaf  — warnings, duration
+# red     = "#e67e80"    # forest berry — errors
+# yellow  = "#dbbc7f" # dry grass
+
+[palettes.evergreen]
+bg0     = "#1a2421"
+bg1     = "#232e2b"
+bg2     = "#2d3b36"
+bg3     = "#3d4f49"
+fg0     = "#d3c6aa"
+fg1     = "#9da9a0"
+green0  = "#a7c080"
+green1  = "#4f772d"
+green2  = "#90a955"
+teal    = "#83c092"
+orange  = "#e69875"
+red     = "#e67e80"
+yellow  = "#dbbc7f"

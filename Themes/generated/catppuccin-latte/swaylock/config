@@ -1,0 +1,46 @@
+# =====================================================
+# Catppuccin Latte — Swaylock Config
+# AUTO-GENERATED — do not edit manually.
+# Edit catppuccin-latte.conf and re-run generate.sh
+# =====================================================
+
+# ── Appearance ────────────────────────────────────────
+ignore-empty-password
+show-failed-attempts
+daemonize
+
+# ── Colors (no # prefix in swaylock config) ───────────
+
+# Background
+color=eff1f5
+
+# Ring
+ring-color=1e66f5
+ring-ver-color=7287fd
+ring-wrong-color=d20f39
+ring-clear-color=04a5e5
+
+# Inside circle
+inside-color=eff1f5
+inside-ver-color=e6e9ef
+inside-wrong-color=dce0e8
+inside-clear-color=e6e9ef
+
+# Key press highlight
+key-hl-color=8839ef
+bs-hl-color=d20f39
+
+# Separator
+separator-color=00000000
+
+# Text
+text-color=4c4f69
+text-ver-color=4c4f69
+text-wrong-color=d20f39
+text-clear-color=6c6f85
+
+# Line (border between inside and ring)
+line-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+line-clear-color=00000000

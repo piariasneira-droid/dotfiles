@@ -1,0 +1,115 @@
+# =====================================================
+# Evergreen Forest — Starship Prompt
+# AUTO-GENERATED — do not edit manually.
+# Edit evergreen.conf and re-run generate.sh
+# =====================================================
+
+palette = "evergreen"
+
+format = """
+$username$directory$git_branch$git_status$git_state$python$nodejs$rust$golang$cmd_duration$jobs$status
+$character"""
+
+add_newline = false
+
+[username]
+format     = "[$user ]($style)"
+style_user = "bold fg:#d3c6aa"
+style_root = "bold fg:#e67e80"
+show_always = true
+
+[directory]
+format            = "[  $path ]($style)"
+style             = "bold fg:#a7c080"
+truncation_length = 4
+truncate_to_repo  = true
+read_only         = "  "
+read_only_style   = "fg:#e67e80"
+
+[directory.substitutions]
+"~/Documentos" = "󰈙 Docs"
+"~/Imagenes"   = "󰋩 Imgs"
+"~"            = "󱂵 ~"
+
+[git_branch]
+format = "[ $symbol$branch ]($style)"
+symbol = " "
+style  = "bold fg:#83c092"
+
+[git_status]
+format    = "([$all_status$ahead_behind ]($style))"
+style     = "bold fg:#e69875"
+ahead     = "⇡${count}"
+behind    = "⇣${count}"
+diverged  = "⇕⇡${ahead_count}⇣${behind_count}"
+modified  = "!${count}"
+untracked = "?${count}"
+staged    = "+${count}"
+deleted   = "✘${count}"
+stashed   = "≡"
+
+[git_state]
+format = "([$state( $progress_current/$progress_total)]($style)) "
+style  = "fg:#e69875"
+
+[python]
+format       = "[ ${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\) )]($style)"
+symbol       = " "
+style        = "fg:#83c092"
+detect_files = ["requirements.txt", "pyproject.toml", ".python-version", "setup.py"]
+
+[nodejs]
+format       = "[ $symbol($version )]($style)"
+symbol       = " "
+style        = "fg:#a7c080"
+detect_files = ["package.json", ".nvmrc"]
+
+[rust]
+format       = "[ $symbol($version )]($style)"
+symbol       = " "
+style        = "fg:#e69875"
+detect_files = ["Cargo.toml"]
+
+[golang]
+format       = "[ $symbol($version )]($style)"
+symbol       = " "
+style        = "fg:#83c092"
+detect_files = ["go.mod"]
+
+[cmd_duration]
+format            = "[ 󱦟 $duration ]($style)"
+style             = "fg:#9da9a0"
+min_time          = 2000
+show_milliseconds = false
+
+[jobs]
+format    = "[ $symbol$number ]($style)"
+symbol    = " "
+style     = "fg:#dbbc7f"
+threshold = 1
+
+[status]
+format   = "[ $symbol$status ]($style)"
+symbol   = " "
+style    = "fg:#e67e80"
+disabled = false
+
+[character]
+success_symbol = "[❯](bold fg:#a7c080)"
+error_symbol   = "[❯](bold fg:#e67e80)"
+vimcmd_symbol  = "[❮](bold fg:#83c092)"
+
+[palettes.evergreen]
+bg0        = "#1a2421"
+bg1        = "#232e2b"
+bg2        = "#2d3b36"
+bg3        = "#3d4f49"
+fg0        = "#d3c6aa"
+fg1        = "#9da9a0"
+accent0    = "#a7c080"
+accent1    = "#4f772d"
+accent2    = "#90a955"
+accent-sec = "#83c092"
+orange     = "#e69875"
+red        = "#e67e80"
+yellow     = "#dbbc7f"

@@ -1,0 +1,251 @@
+/* =====================================================
+ * Evergreen Forest — SwayNC Style
+ * AUTO-GENERATED — do not edit manually.
+ * Edit evergreen.conf and re-run generate.sh
+ * ===================================================== */
+
+/* ----- Global ----- */
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size:   14px;
+    transition:  all 0.2s ease;
+}
+
+/* ----- Control Center ----- */
+.control-center {
+    background-color: rgba(26, 36, 33, 0.95);
+    border:           1px solid #a7c080;
+    border-radius:    14px;
+    padding:          8px;
+    color:            #d3c6aa;
+}
+
+.control-center-list {
+    background-color: transparent;
+}
+
+/* ----- Notification row ----- */
+.notification-row {
+    outline:  none;
+    padding:  4px 8px;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+    background: transparent;
+}
+
+/* ----- Notification card ----- */
+.notification {
+    background-color: #232e2b;
+    border-radius:    12px;
+    border:           1px solid #3d4f49;
+    padding:          8px;
+    margin:           4px 0px;
+    color:            #d3c6aa;
+}
+
+.notification:hover {
+    border-color: #a7c080;
+}
+
+/* Urgency left-border accent */
+.notification.low      { border-left: 3px solid #4f772d; }
+.notification.normal   { border-left: 3px solid #a7c080; }
+.notification.critical {
+    border-left:      3px solid #e67e80;
+    background-color: rgba(26, 36, 33, 0.90);
+}
+
+/* ----- Notification default action ----- */
+.notification-default-action {
+    background:    transparent;
+    border-radius: 12px;
+    padding:       4px;
+    color:         #d3c6aa;
+}
+
+.notification-default-action:hover {
+    background: rgba(167, 192, 128, 0.15);
+}
+
+/* ----- Notification content ----- */
+.notification-content {
+    background: transparent;
+    padding:    4px 0px;
+}
+
+.app-name {
+    color:       #a7c080;
+    font-weight: bold;
+    font-size:   13px;
+}
+
+.app-icon {
+    -gtk-icon-size: 20px;
+}
+
+.timestamp {
+    color:     #9da9a0;
+    font-size: 11px;
+}
+
+.summary {
+    color:       #d3c6aa;
+    font-weight: bold;
+    font-size:   14px;
+    padding-top: 2px;
+}
+
+.body {
+    color:     #9da9a0;
+    font-size: 13px;
+}
+
+/* ----- Close button ----- */
+.close-button {
+    background:    #3d4f49;
+    color:         #9da9a0;
+    border-radius: 6px;
+    border:        none;
+    padding:       2px 6px;
+}
+
+.close-button:hover {
+    background: #e67e80;
+    color:      #1a2421;
+}
+
+/* ----- Action buttons ----- */
+.notification-action {
+    background:    #2d3b36;
+    border-radius: 8px;
+    border:        1px solid #3d4f49;
+    color:         #d3c6aa;
+    padding:       4px 10px;
+    margin:        4px 2px 0px;
+}
+
+.notification-action:hover {
+    background:   #a7c080;
+    color:        #1a2421;
+    border-color: #a7c080;
+}
+
+/* ----- Widget: title bar ----- */
+.widget-title {
+    background: transparent;
+    padding:    6px 12px;
+    margin-bottom: 4px;
+}
+
+.widget-title > label {
+    color:       #a7c080;
+    font-size:   16px;
+    font-weight: bold;
+}
+
+.widget-title > button {
+    background:    #2d3b36;
+    border-radius: 8px;
+    border:        1px solid #3d4f49;
+    color:         #9da9a0;
+    padding:       4px 10px;
+    font-size:     12px;
+}
+
+.widget-title > button:hover {
+    background:   #e67e80;
+    color:        #1a2421;
+    border-color: #e67e80;
+}
+
+/* ----- Widget: Do Not Disturb ----- */
+.widget-dnd {
+    background:    #232e2b;
+    border-radius: 10px;
+    padding:       6px 12px;
+    margin-bottom: 6px;
+    color:         #d3c6aa;
+}
+
+.widget-dnd > switch {
+    border-radius: 20px;
+    background:    #3d4f49;
+    border:        1px solid #3d4f49;
+}
+
+.widget-dnd > switch:checked {
+    background:   #e67e80;
+    border-color: #e67e80;
+}
+
+.widget-dnd > switch slider {
+    background:    #d3c6aa;
+    border-radius: 50%;
+    min-width:     18px;
+    min-height:    18px;
+}
+
+/* ----- Widget: mpris ----- */
+.widget-mpris {
+    background:    #232e2b;
+    border-radius: 10px;
+    padding:       8px 12px;
+    margin-bottom: 6px;
+    color:         #d3c6aa;
+    border:        1px solid #3d4f49;
+}
+
+.widget-mpris-player {
+    background: transparent;
+    padding:    4px;
+}
+
+.widget-mpris-title {
+    color:       #d3c6aa;
+    font-weight: bold;
+}
+
+.widget-mpris-subtitle {
+    color: #9da9a0;
+}
+
+/* ----- Notification count badge ----- */
+.widget-notification-count > label {
+    color:         #9da9a0;
+    font-size:     12px;
+    background:    #2d3b36;
+    border-radius: 6px;
+    padding:       2px 6px;
+}
+
+/* ----- Inline reply ----- */
+.inline-reply {
+    margin-top: 8px;
+}
+
+.inline-reply-entry {
+    background:    #2d3b36;
+    color:         #d3c6aa;
+    border-radius: 8px;
+    border:        1px solid #3d4f49;
+    padding:       4px 8px;
+}
+
+.inline-reply-entry:focus {
+    border-color: #a7c080;
+}
+
+.inline-reply-button {
+    background:    #a7c080;
+    color:         #1a2421;
+    border-radius: 8px;
+    border:        none;
+    padding:       4px 10px;
+    font-weight:   bold;
+}
+
+.inline-reply-button:hover {
+    background: #90a955;
+}

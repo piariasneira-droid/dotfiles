@@ -1,0 +1,53 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-margin-top": 10,
+  "control-center-margin-bottom": 10,
+  "control-center-margin-right": 10,
+  "control-center-margin-left": 10,
+  "notification-icon-size": 64,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "timeout": 10,
+  "scripts": {
+    "example-script": {
+      "exec": "echo 'Notificación recibida'",
+      "run-on": "receive"
+    }
+  },
+  "widgets": [
+    "label",
+    "buttons-grid",
+    "mpris",
+    "title",
+    "dnd",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Notificaciones",
+      "clear-all-button": true,
+      "button-text": "Limpiar"
+    },
+    "dnd": {
+      "text": "No molestar"
+    },
+    "label": {
+      "max-lines": 1,
+      "text": "Centro de Control"
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "",
+          "command": "foot --title 'BT-Picker' -e /home/pivan/.config/sway/scripts/bluetooth.sh"
+        },
+        {
+          "label": "",
+          "command": "nm-connection-editor"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/* =====================================================
+ * Evergreen Forest — SwayNC Colors
+ * AUTO-GENERATED — do not edit manually.
+ * Edit evergreen.conf and re-run generate.sh
+ * ===================================================== */
+
+* {
+    --bg0:      #1a2421;
+    --bg1:      #232e2b;
+    --bg2:      #2d3b36;
+    --bg3:      #3d4f49;
+
+    --fg0:      #d3c6aa;
+    --fg1:      #9da9a0;
+
+    --green0:   #a7c080;
+    --green1:   #4f772d;
+    --green2:   #90a955;
+    --teal:     #83c092;
+    --orange:   #e69875;
+    --red:      #e67e80;
+    --yellow:   #dbbc7f;
+}

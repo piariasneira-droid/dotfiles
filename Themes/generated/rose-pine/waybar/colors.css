@@ -1,0 +1,18 @@
+/* =====================================================
+ * Rosé Pine — Waybar Colors
+ * AUTO-GENERATED — do not edit manually.
+ * Edit rose-pine.conf and re-run generate.sh
+ * ===================================================== */
+
+@define-color background           rgba(0, 0, 0, 0);
+@define-color transparent          rgba(0, 0, 0, 0);
+@define-color tooltip_background   rgba(0, 0, 0, 0.9);
+
+@define-color on_surface           #ffffff;
+
+@define-color primary              #eb6f92;
+@define-color primary_container    rgba(235, 111, 146, 0.2);
+
+@define-color tertiary             #ebbcba;
+
+@define-color error                #eb6f92;

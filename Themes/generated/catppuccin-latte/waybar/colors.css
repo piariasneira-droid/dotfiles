@@ -1,0 +1,18 @@
+/* =====================================================
+ * Catppuccin Latte — Waybar Colors
+ * AUTO-GENERATED — do not edit manually.
+ * Edit catppuccin-latte.conf and re-run generate.sh
+ * ===================================================== */
+
+@define-color background           rgba(0, 0, 0, 0);
+@define-color transparent          rgba(0, 0, 0, 0);
+@define-color tooltip_background   rgba(76, 79, 105, 0.95);
+
+@define-color on_surface           #4c4f69;
+
+@define-color primary              #8839ef;
+@define-color primary_container    rgba(136, 57, 239, 0.15);
+
+@define-color tertiary             #7287fd;
+
+@define-color error                #d20f39;
