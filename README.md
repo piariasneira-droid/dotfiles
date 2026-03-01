@@ -248,9 +248,3 @@ bindswitch lid:off output eDP-1 dpms on
 ```
 
 ---
-
-<div align="center">
-
-Made with 🌲 on Arch Linux
-
-</div>
