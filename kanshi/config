@@ -1,0 +1,37 @@
+## Profile: Laptop Only
+profile {
+    output "eDP-1" enable mode 1366x768 position 0,0
+}
+
+## Profile: Work (Office Hub)
+profile {
+    # Note: If these are physical ports, ensure names match swaymsg -t get_outputs
+    output "DP-5" enable mode 1920x1080 position 0,0
+    output "DP-2" enable mode 1920x1080 position 1920,0
+    output "eDP-1" enable mode 1366x768 position 3840,0
+}
+
+## Profile: 4K TV Setup
+profile {
+    output "HDMI-A-1" enable mode 3840x2160 position 0,0
+    output "eDP-1" enable mode 1366x768 position 3840,0
+}
+
+## Profile: Home Hub
+profile {
+    output "DP-3" {
+        mode "2560x1440@180Hz"
+        position 0,0
+        scale 2.0
+    }
+    output "DP-2" {
+        mode "2560x1440@144Hz"
+        position 1280,0
+        scale 2.0
+    }
+    output "eDP-1" {
+        mode 1366x768
+        position 2560,0
+        scale 1.0
+    }
+}
