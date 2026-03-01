@@ -1,0 +1,8 @@
+# -----------------------------------------------------
+# AUTOSTART
+# -----------------------------------------------------
+
+# Fastfetch: Runs only in interactive terminal sessions
+if [[ $(tty) == *"pts"* ]]; then
+    command -v fastfetch >/dev/null 2>&1 && fastfetch
+fi

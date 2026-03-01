@@ -1,0 +1,197 @@
+/*
+ * Waybar Theme - Fully Modular
+ */
+
+@import "colors.css";
+
+/* -----------------------------------------------------
+ * General
+ * ----------------------------------------------------- */
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", "Font Awesome 7 Free";
+    border: none;
+    border-radius: 0px;
+    font-size: 16px;
+}
+
+window#waybar {
+    background-color: @background;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+/* -----------------------------------------------------
+ * Workspaces (Sway)
+ * ----------------------------------------------------- */
+#workspaces button {
+    padding: 0px 5px;
+    margin: 2px 2px;
+    border-radius: 15px;
+    color: @on_surface;
+    background-color: @transparent;
+    transition: all 0.3s ease-in-out; 
+}
+
+#workspaces button.focused {
+    color: @on_surface;
+    background: @primary;
+    min-width: 40px;
+}
+
+#workspaces button:hover {
+    background: @tertiary;
+}
+
+/* -----------------------------------------------------
+ * System & Action Modules
+ * ----------------------------------------------------- */
+#clock,
+#battery,
+#backlight,
+#pulseaudio,
+#bluetooth,
+#network,
+#cpu,
+#disk,
+#memory,
+#mpris,
+#idle_inhibitor,
+#custom-exit,
+#custom-notification,
+#custom-updates,
+#tray {
+    background-color: @transparent;
+    color: @on_surface;
+    padding: 2px 6px;
+    margin: 2px 3px;
+    font-weight: bold;
+    transition: all 0.3s ease-out;    
+}
+
+#clock:hover,
+#battery:hover,
+#backlight:hover,
+#pulseaudio:hover,
+#bluetooth:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#mpris:hover,
+#idle_inhibitor:hover,
+#custom-exit:hover,
+#custom-notification:hover,
+#custom-updates:hover {
+    color: @primary;
+}
+
+/* -----------------------------------------------------
+ * Special States
+ * ----------------------------------------------------- */
+#idle_inhibitor.activated { color: @error; }
+#pulseaudio.muted { opacity: 0.5; }
+#battery.warning { color: @tertiary; }
+#battery.critical:not(.charging) { color: @error; }
+#bluetooth.off { padding: 0px; margin: 0px; opacity: 0.5; }
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+tooltip {
+    border-radius: 10px;
+    background-color: @tooltip_background;
+    border: 1px solid @primary;
+}
+
+tooltip label { color: @on_surface; }
+
+/* -----------------------------------------------------
+ * Window
+ * ----------------------------------------------------- */
+#window {
+    margin: 0px 8px 0px 3px;
+    padding: 2px 6px 0px 6px;
+    background-color: @transparent;
+    color: @on_surface;
+    font-size: 16px;
+}
+
+/* -----------------------------------------------------
+ * App Menu (Arch Linux Icon)
+ * ----------------------------------------------------- */
+#custom-appmenu {
+    background-color: @transparent;
+    font-size: 16px;
+    color: @on_surface;
+    border-radius: 8px;
+    padding: 2px 4px;
+    margin: 2px 2px 2px 0px; 
+    transition: all 0.3s ease-out;    
+}
+
+#custom-appmenu:hover {
+    color: @primary
+}
+
+/* -----------------------------------------------------
+ * Custom Quicklinks
+ * ----------------------------------------------------- */
+#custom-quicklink_zen,
+#custom-quicklink_thunar,
+#custom-quicklink_foot,
+#custom-quicklink_code,
+#custom-quicklink_r,
+#custom-quicklink_teams,
+#custom-quicklink_excel,
+#custom-quicklink_word {
+    margin-right: 2px;
+    margin-left: 2px;
+    padding: 2px 4px;
+    font-size: 16px;
+    font-weight: bold;
+    color: @on_surface;
+    background-color: @transparent;
+    transition: all 0.3s ease-out;
+}
+
+#custom-quicklink_zen:hover,
+#custom-quicklink_thunar:hover,
+#custom-quicklink_foot:hover,
+#custom-quicklink_code:hover,
+#custom-quicklink_r:hover,
+#custom-quicklink_teams:hover,
+#custom-quicklink_excel:hover,
+#custom-quicklink_word:hover {
+    color: @primary;
+}
+
+/* -----------------------------------------------------
+ * Theme Switcher
+ * ----------------------------------------------------- */
+#custom-theme {
+    background-color: @transparent;
+    color: @on_surface;
+    padding: 2px 6px;
+    margin: 2px 3px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+
+#custom-theme:hover {
+    color: @primary;
+}
+
+/* -----------------------------------------------------
+ * Tray & MPRIS
+ * ----------------------------------------------------- */
+#tray { padding: 0px 4px 0px 0px; }
+#mpris {
+    background-color: @transparent;
+    color: @on_surface;
+    font-size: 16px;
+    padding: 2px 8px;
+    margin: 2px 3px 2px 0px;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}

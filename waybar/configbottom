@@ -1,0 +1,35 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+    "include": [
+        "~/.config/waybar/waybar-quicklinks.json",
+        "~/.config/waybar/modules.json"
+    ],
+
+    "modules-left": [
+        "wlr/taskbar",
+        "sway/window"
+    ],
+
+    "modules-center": [
+        "custom/quicklink_zen",
+        "custom/quicklink_foot",
+        "custom/quicklink_thunar",
+        "custom/quicklink_r",
+        "custom/appmenu",
+        "custom/quicklink_code",
+        "custom/quicklink_teams",
+        "custom/quicklink_excel",
+        "custom/quicklink_word"
+    ],
+    
+    "modules-right": [
+        "mpris",
+        "tray"
+    ]
+}

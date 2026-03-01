@@ -1,0 +1,229 @@
+{
+  // Workspaces Configuration
+  "sway/workspaces": {
+    "on-scroll-up": "swaymsg workspace prev",
+    "on-scroll-down": "swaymsg workspace next",
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": false,
+    "format": "{index}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": ""
+    }
+  },
+
+  // Focused Window Title
+  "sway/window": {
+    "max-length": 50,
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "󰈹 $1",
+      "(.*) - Visual Studio Code": "󰨞 $1",
+      "(.*) - foot": " $1"
+    },
+    "separate-outputs": true
+  },
+
+  // Media Player Control (MPRIS)
+  "mpris": {
+      "format": "{player_icon} {title}",
+      "format-paused": "{status_icon} {title}",
+      "tooltip-format": "Player: {player}\nTitle: {title}\nArtist: {artist}",
+      "tooltip-format-paused": "Paused: {title}",
+      "player-icons": {
+        "default": "󰐊",
+        "mpv": "",
+        "zen-browser": "󰖟" 
+      },
+      "status-icons": {
+        "paused": "󰏤"
+      },
+      "max-length": 35,
+      "on-click": "playerctl play-pause",
+      "on-scroll-up": "playerctl next",
+      "on-scroll-down": "playerctl previous"
+  },
+
+  // Audio Control 
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  // Bluetooth Management
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": " off",
+    "format-off": " off",
+    "format-connected": " {num_connections}",
+    "interval": 30,
+    "on-click": "foot -e /home/pivan/.config/sway/scripts/bluetooth.sh",    "on-click-right": "rfkill toggle bluetooth",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "Connected devices: {num_connections}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t| Battery: {device_battery_percentage}%",
+    "format-no-controller": ""
+  },
+
+  // Network Management
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": "󰈀 {ipaddr}",
+    "format-disconnected": "No Network ⚠",
+    "tooltip-format": " {ifname} via {gwaddr}",
+    "tooltip-format-wifi": " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "max-length": 50,
+    "on-click": "foot nmtui",
+    "on-click-right": "nm-connection-editor"
+  },
+
+  // CPU
+  "cpu": {
+    "format": " {usage}%",
+    "on-click": "foot htop"
+  },
+
+  // RAM
+  "memory": {
+    "format": " {used:0.1f}G",
+    "on-click": "foot htop",
+    "tooltip-format": "RAM Usada: {used:0.2f} G\nTotal: {total:0.2f} G\nSwap Usada: {swapUsed:0.2f} G\nTotal: {swapTotal:0.2f} G"
+  },
+
+  // Disk (Btrfs)
+  "disk": {
+    "interval": 30,
+    "format": "󰋊 {percentage_used}%",
+    "path": "/",
+    "on-click": "foot sh -c 'sudo btrfs filesystem usage /; echo \"\"; sudo btrfs subvolume list /; exec zsh'",
+    "tooltip": true,
+    "tooltip-format": "Disk Used: {used} / {total}\n({percentage:0.1f}% used)"
+  },
+
+  // Clock and Calendar
+  "clock": {
+    "format": "{:%H:%M %a}",
+    "on-click": "gsimplecal",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  // Idle Inhibitor
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+
+  // Exit menu
+  "custom/exit": {
+    "format": "",
+    "on-click": "bash ~/.config/sway/scripts/powermenu.sh",
+    "on-click-right": "~/.config/sway/scripts/theater.sh"
+  },
+
+  // Theme switcher
+  "custom/theme": {
+    "format": "󰏘",
+    "on-click": "bash ~/Themes/switch-theme.sh",
+    "tooltip-format": "Switch theme"
+  },
+
+  // Backlight
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+    "scroll-step": 1
+  },
+
+  // Battery Status Monitor
+  "battery": {
+    "interval": 1,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  // System Tray
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+
+  // Application Menu
+  "custom/appmenu": {
+    "format": "󰣇",
+    "on-click": "rofi -show",
+    "tooltip-format": "Left: Launcher\nRight: Manual"
+  },
+
+  // Updates
+  "custom/updates": {
+    "format": " {}",
+    "interval": 3600,
+    "exec": "checkupdates | wc -l",
+    "exec-if": "exit 0",
+    "on-click": "foot -e yay -Syu",
+    "signal": 8
+  },
+
+  // Notification
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='#ff5555'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span color='#ff5555'><s></s></span><span foreground='#ff5555'><sup></sup></span>",
+      "dnd-none": "<span color='#ff5555'><s></s></span>",
+      "inhibited-notification": "<span foreground='#ff5555'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span color='#ff5555'><s></s></span><span foreground='#ff5555'><sup></sup></span>",
+      "dnd-inhibited-none": "<span color='#ff5555'><s></s></span>"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+    "escape": true
+  },
+
+  // Taskbar
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 16,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [],
+    "app_ids_mapping": {},
+    "rewrite": {
+        "Firefox Web Browser": "Firefox",
+        "Foot Server": "Terminal"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+# -----------------------------------------------------
+# INIT - Environment & Path
+# -----------------------------------------------------
+
+# Set your default editor
+export EDITOR=nvim
+
+# Function to safely add to PATH (prevents duplicates and invalid paths)
+add_to_path() {
+    if [[ -d "$1" ]] && [[ ":$PATH:" != *":$1:"* ]]; then
+        export PATH="$1:$PATH"
+    fi
+}
+
+# Apply paths in order of priority
+add_to_path "$HOME/.local/bin"
+add_to_path "$HOME/.cargo/bin"
+add_to_path "/usr/lib/ccache/bin"
+
+# Ensure common library paths are set for your Arch setup
+export XDG_CONFIG_HOME="$HOME/.config"

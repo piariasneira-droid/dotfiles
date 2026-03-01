@@ -1,0 +1,29 @@
+### SWAY CONFIGURATION FILE (MODULAR)
+## 0. Environment
+include ~/.config/sway/config.d/00-environment.conf
+
+## 1. Variables
+include ~/.config/sway/config.d/01-variables.conf
+
+## 2. Input
+include ~/.config/sway/config.d/02-input.conf
+
+## 3. Keybindings
+include ~/.config/sway/config.d/03-binds.conf
+
+## 4. Mouse
+include ~/.config/sway/config.d/04-mouse.conf
+
+## 5. Appearance
+include ~/.config/sway/config.d/05-appearance.conf
+
+## 6. Monitors and Workspaces
+#include ~/.config/sway/config.d/06-monitors.conf
+#include ~/.config/sway/config.d/06-monitors_work.conf
+include ~/.config/sway/config.d/06-workspaces_vars.conf
+
+## 7. Startup and Services
+include ~/.config/sway/config.d/07-startup.conf
+
+## 8. Wallpaper
+include ~/.config/sway/config.d/08-wallpaper.conf

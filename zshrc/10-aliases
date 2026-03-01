@@ -1,0 +1,31 @@
+# -----------------------------------------------------
+# ALIASES
+# -----------------------------------------------------
+
+# --- Navigation & Essentials ---
+alias ..='cd ..' 
+alias c='clear' 
+alias v='$EDITOR' 
+alias ff='fastfetch'
+
+# --- Theme & UI Management ---
+alias gentheme='bash ~/Themes/generate.sh'
+alias changetheme='bash ~/Themes/switch-theme.sh'
+alias iniwaybar='bash ~/.config/sway/scripts/execwaybar.sh &'
+
+# --- System & Power ---
+alias shutdown='systemctl poweroff'
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias umount-all='udiskie-umount -a'
+alias fix-ntfs='sudo ntfsfix -d /dev/sda1'
+
+# --- Services (SSH & Bluetooth) ---
+alias sshon='sudo systemctl start sshd' 
+alias sshoff='sudo systemctl stop sshd' 
+
+# --- Applications
+alias tor='MOZ_ENABLE_WAYLAND=1 ~/Apps/tor-browser/Browser/start-tor-browser'
+alias rstceb='bash ~/Documentos/comercio_exterior_bienes/rstudio-pixi.sh'
+alias ace='bash ~/Apps/scripts/ace.sh'
+alias stopa-ace='bash ~/Apps/scripts/stop-ace.sh'
+alias hometv='bash ~/.config/sway/scripts/theater.sh'

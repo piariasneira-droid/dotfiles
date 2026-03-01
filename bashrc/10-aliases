@@ -1,0 +1,26 @@
+# -----------------------------------------------------
+# ALIASES - Optimized
+# -----------------------------------------------------
+
+# Navigation & General
+alias ..='cd ..'
+alias c='clear'
+alias v='$EDITOR'
+
+# Fastfetch
+alias ff='fastfetch'
+
+# Keyboard & Locale
+alias set-esp='sudo loadkeys es'
+alias fix-ntfs='sudo ntfsfix -d /dev/sda1'
+
+# Service Management (Keeping them down by default)
+alias sshon='sudo systemctl start sshd'
+alias sshoff='sudo systemctl stop sshd'
+
+# Development & Research
+alias rstceb='~/Documentos/comercio_exterior_bienes/rstudio-pixi.sh'
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
+# System
+alias shutdown='systemctl poweroff'

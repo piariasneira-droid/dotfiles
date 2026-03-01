@@ -1,0 +1,17 @@
+# -----------------------------------------------------
+# INIT - Environment & Path
+# -----------------------------------------------------
+
+export EDITOR=nvim 
+export XDG_CONFIG_HOME="$HOME/.config" 
+
+# Function to safely add to PATH
+add_to_path() {
+    if [[ -d "$1" ]] && [[ ":$PATH:" != *":$1:"* ]]; then
+        export PATH="$1:$PATH" 
+    fi
+}
+
+add_to_path "$HOME/.local/bin" 
+add_to_path "$HOME/.cargo/bin" 
+add_to_path "/usr/lib/ccache/bin" 

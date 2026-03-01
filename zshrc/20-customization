@@ -1,0 +1,45 @@
+# -----------------------------------------------------
+# CUSTOMIZATION - Plugins & Starship
+# -----------------------------------------------------
+
+# Initialize Starship prompt
+if command -v starship >/dev/null 2>&1; then
+    eval "$(starship init zsh)"
+fi
+
+# 1. Autocompletion (Autosuggestions)
+# This shows ghost text as you type based on your history
+if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+# 2. Syntax Highlighting (Visual Autocorrect)
+# This turns commands red if they are invalid and green if they are correct
+if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# 3. Built-in Zsh Autocorrect
+# This prompts you "zsh: correct 'sl' to 'ls' [nyae]?" when you mistype
+ENABLE_CORRECTION="true"
+if [[ "$ENABLE_CORRECTION" == "true" ]]; then
+    setopt correct
+fi
+
+# -----------------------------------------------------
+# KEYBINDINGS - Keyboard Configuration (Spanish)
+# -----------------------------------------------------
+
+# Map the "Delete" key to delete characters forward
+bindkey "^[[3~" delete-char
+
+# Ensure "Home" and "End" keys function correctly
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
+# AUTOCOMPLETE OPTIONS
+# Accept only the next WORD (Control + Space)
+bindkey '^ ' forward-word
+
+# Accept the FULL suggestion (Control + E)
+bindkey '^E' autosuggest-accept

@@ -1,0 +1,61 @@
+/* -----------------------------------------------------
+ * Waybar Quick links
+ * ----------------------------------------------------- */
+
+{
+    // Zen Browser
+    "custom/quicklink_zen": {
+        "format": "󰖟",
+        "on-click": "zen-browser",
+        "tooltip-format": "Zen Browser"
+    },
+
+    // Thunar File Manager
+    "custom/quicklink_thunar": {
+        "format": "",
+        "on-click": "thunar",
+        "tooltip-format": "File Manager"
+    },
+
+    // Foot Terminal
+    "custom/quicklink_foot": {
+        "format": "",
+        "on-click": "foot",
+        "tooltip-format": "Foot Terminal"
+    },
+
+    // VS Code
+    "custom/quicklink_code": {
+        "format": "󰨞",
+        "on-click": "code",
+        "tooltip-format": "VS Code"
+    },
+
+    // RStudio
+    "custom/quicklink_r": {
+        "format": "󰟔",
+        "on-click": "~/Documentos/comercio_exterior_bienes/rstudio-pixi.sh",
+        "tooltip-format": "RStudio"
+    },
+
+    // Teams
+    "custom/quicklink_teams": {
+        "format": "󰊻",
+        "on-click": "teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland",
+        "tooltip-format": "Microsoft Teams"
+    },
+
+    // OnlyOffice Spreadsheet (Excel)
+    "custom/quicklink_excel": {
+        "format": "󱎏",
+        "on-click": "onlyoffice-desktopeditors --new:spreadsheet",
+        "tooltip-format": "OnlyOffice Spreadsheet"
+    },
+
+    // OnlyOffice Word
+    "custom/quicklink_word": {
+        "format": "󰈙",
+        "on-click": "onlyoffice-desktopeditors --new:word",
+        "tooltip-format": "OnlyOffice Document"
+    }
+}
